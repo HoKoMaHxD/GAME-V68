@@ -1,0 +1,46 @@
+✔ وقت reads a new member without assigning tasks, creating days or writing anything (6.468295ms)
+✔ salary and prize deadlines persist across midnight and restart and become ready at their exact boundaries (5.72113ms)
+✔ disabled commands and quest ineligibility are not shown as ready (2.852247ms)
+✔ protection reports the full stacked expiration and allows buying more while protected (4.631969ms)
+✖ robbery reports an open challenge and ignores expired or invalidated challenges (1.250414ms)
+✔ remaining time rounds up a partial second and public payloads never ping members (1.565829ms)
+✔ all six reference quests run together without requesting/accepting; all rewards total 31000 plus attendance (446.363196ms)
+✔ Saudi midnight clears unfinished progress, leaves the wallet intact and splits a voice interval exactly (21.756959ms)
+✔ upgrade archives active offers and task snapshots, preserving balances, activity, receipts and notification preferences (4.36771ms)
+✔ lost before-commit task acknowledgement never duplicates the reward or DM (3.362235ms)
+✔ lost after-commit task acknowledgement never duplicates the reward or DM (2.370181ms)
+✔ partial catalog installation resumes at the original boundary and ordinary restarts preserve later admin edits (1.349513ms)
+✔ daily warnings, completion and reset summaries use the final saved state; old quest alerts become obsolete (16.506413ms)
+✔ daily assignment snapshots keep their old observation channels after a catalog edit (2.681871ms)
+✔ unsafe task reward totals fail atomically without a progress commit or a false completion DM (2.172843ms)
+✔ extra voice rooms are optional, validate IDs and deduplicate all three rooms (3.749329ms)
+✔ 60 minutes in each of three clan rooms completes the existing three-hour quest exactly once (2.843193ms)
+✔ attendance anchored to the third room shares fractions and one daily cap across all three rooms (0.427874ms)
+✔ unconfigured channels do not earn clan rewards and removing the third ID preserves earned progress (0.459622ms)
+✔ voice grouping leaves message tasks and custom voice channels bound to their own rooms (0.635948ms)
+✔ enabling the second room after restart keeps current assignments, earned rewards and attendance fractions (2.939529ms)
+✔ enabling the third room after restart keeps current assignments, earned rewards and attendance fractions (1.059857ms)
+✔ tracker moves between all three rooms and leaving credit each elapsed interval only once (2.542991ms)
+✔ third-room intervals crossing Saudi midnight split days and never carry yesterday progress into today (1.197133ms)
+✔ visible voice states count with Connect denied, while hidden and untracked channels are excluded (1.209622ms)
+✔ legacy four-quest display lists all three voice rooms and the current availability notice (3.60401ms)
+✔ attendance settings show all three effective channels and status checks each once (11.873083ms)
+✔ one failed member cannot discard other members or credit departed time (2.619807ms)
+✔ committed interval with lost acknowledgment retries without duplicate time (0.612132ms)
+✔ slow member does not prevent another member starting its save (10.262723ms)
+✔ pending known time survives disconnect without counting disconnected gap (0.872214ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 30
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 961.164062
+
+✖ failing tests:
+
+test at test/command-times.test.js:70:1
+✖ robbery reports an open challenge and ignores expired or invalidated challenges (1.250414ms)
+  Error: لا تقدر تبدأ نهب ورصيدك صفر أو بالسالب؛ تحتاج رصيدًا أكبر من صفر.
+      at file:///workspace/scratch/d5f994512ef9/work/GAME-V52-main/src/service.js:435:95

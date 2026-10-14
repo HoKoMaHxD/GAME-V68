@@ -1,0 +1,382 @@
+✖ new voice observations cannot extend the currently saving batch ahead of the ninth member (6.759061ms)
+✖ a slow idle xo scan does not block a balance command (14.030216ms)
+✖ a slow idle buttonGame scan does not block a balance command (4.731476ms)
+✖ a slow idle mini scan does not block a balance command (4.417404ms)
+✖ a slow idle memory scan does not block a balance command (3.964677ms)
+✖ a slow idle robbery scan does not block a balance command (3.906672ms)
+✖ a requester can flush their own observed voice time while another member has a slow save (1.576471ms)
+✖ irrelevant voice-state changes create no extra writes and leaving still stops time exactly (4.11616ms)
+✖ public quest cards edit only when their displayed progress changes (53.048439ms)
+✖ private quest cards edit only when their displayed progress changes (12.545104ms)
+✔ idle robbery discovery still blocks an unresolved financial journal (2.299225ms)
+✔ slash robbery has exactly one required member and commands panel lists its reference description (32.829812ms)
+✔ public challenge contains only the three player options and no hidden bot move or selected rate (13.621394ms)
+✖ a member cannot start a second robbery command while the first challenge is open (3.26009ms)
+✔ victim and other members cannot press, and a forged owner in the custom ID still cannot settle (4.03506ms)
+✔ owner selection reveals both moves, pays once and edits the public challenge with disabled buttons (13.325208ms)
+✔ failed theft displays a 15-minute target shield while ties display none (5.703116ms)
+✖ a protected target gets the reference reply with its remaining minutes and seconds and no currency changes (4.501317ms)
+✔ bang command resolves the mentioned member and cannot start for bots, webhook or another guild (16.319305ms)
+✔ missing, self, bot, ineligible and foreign-server targets never create a challenge (1.446911ms)
+✔ an uncertain payment leaves the public challenge intact and reports privately for recovery (3.006657ms)
+✔ failed Discord result edit does not refund or repeat the already committed transfer (2.73067ms)
+✔ all result variants fit embed limits, retain the footer brand and disable completed choices (11.901762ms)
+✔ wallet and task views disclose net robbery while activity and attendance caps stay separate (5.667494ms)
+✔ random game selection covers both games and commits one hidden mine and a complete bot order (2.89348ms)
+✔ every possible mine gives exactly one loser within nine alternating picks and can never tie (1.68472ms)
+✔ bot order is independent of the mine and does not skip it (0.298109ms)
+✔ safe turns persist without touching either balance and survive restart without rerolling (10.742155ms)
+✔ simultaneous different clicks from one board consume only one player/bot turn (18.363686ms)
+✔ mine win, amount 600: settles once, keeps current protection, and stages both DMs (28.306584ms)
+✔ mine loss, amount 600: settles once, keeps current protection, and stages both DMs (5.473037ms)
+✔ mine win, amount 0: settles once, keeps current protection, and stages both DMs (3.800696ms)
+✖ mine loss, amount 0: settles once, keeps current protection, and stages both DMs (1.190193ms)
+✔ ownership, room, membership, stale cells, cross-game buttons, and bad input cannot spend or advance (3.400837ms)
+✔ target protection, bank changes and resets stop ongoing mine turns without a transfer (6.153189ms)
+✔ legacy RPS rounds remain playable and mine buttons cannot select a different game (4.35411ms)
+✔ safe-turn before-write interruption preserves the original board or committed pair (1.523363ms)
+✔ safe-turn after-write interruption preserves the original board or committed pair (2.035667ms)
+✔ mine settlement recovery: reserve before (3.126012ms)
+✔ mine settlement recovery: reserve after (5.910822ms)
+✔ mine settlement recovery: debit before (1.493339ms)
+✔ mine settlement recovery: debit after (5.635116ms)
+✔ mine settlement recovery: credit before (2.458109ms)
+✔ mine settlement recovery: credit after (3.094817ms)
+✔ mine settlement recovery: result before (5.357217ms)
+✔ mine settlement recovery: result after (5.115261ms)
+✔ mine settlement recovery: clear before (2.527822ms)
+✔ mine settlement recovery: clear after (4.122249ms)
+✔ 3×3 board hides the mine, marks safe numbers with green eyes and the hit with a red bomb (4.944609ms)
+✔ mine component parser rejects malformed cells/revisions and keeps RPS IDs compatible (0.368092ms)
+✔ slash and text render the committed player and bot turns in one usable board (9.311549ms)
+✔ failed Discord edit and replay cannot repeat a safe bot turn or financial transfer (17.142848ms)
+✔ a mine result keeps the one-minute cooldown, including restart and a different target (32.989388ms)
+✔ rps: no click loses automatically exactly at expiry, grants normal loss shield, and notifies both sides (36.895859ms)
+✔ mine: no click loses automatically exactly at expiry, grants normal loss shield, and notifies both sides (17.61304ms)
+✔ starting the mine then abandoning it loses without inventing another pick or moving the mine (10.433401ms)
+✔ a stale mine click at expiry shows only the timeout result, without a phantom bot animation (7.56037ms)
+✔ rps: a press and background expiry racing at the deadline cannot play or charge twice (4.234244ms)
+✔ mine: a press and background expiry racing at the deadline cannot play or charge twice (3.882576ms)
+✔ a move committed before the deadline keeps its result and cannot become a later timeout loss (5.095983ms)
+✖ timeout uses available balances, including an empty wallet, without counting it as a tie (6.025325ms)
+✔ bank resets, disabled robbery and moved channels cancel games instead of imposing timeout penalties (10.299584ms)
+✔ older unplayed rounds never gain a retroactive timeout penalty (3.495215ms)
+✖ the same target accepts only the first concurrent attacker, across both game types and restart (10.879337ms)
+✔ the target lock is released on settlement while normal protection remains, including for a tie (6.084527ms)
+✔ invalidated games release the target, and the old player cannot settle them later (2.052662ms)
+✔ an attacker cannot open another target to escape an overdue loss before the timer runs (4.210703ms)
+✔ buying protection mid-game cancels the blocked challenge without imposing a timeout debit (4.399697ms)
+✔ lost lease blocks expiry and cannot debit or release a target reservation (3.517229ms)
+✔ timeout journal recovery: reserve before (11.277684ms)
+✔ timeout journal recovery: reserve after (1.871906ms)
+✔ timeout journal recovery: debit before (2.007525ms)
+✔ timeout journal recovery: debit after (1.839148ms)
+✔ timeout journal recovery: credit before (2.402286ms)
+✔ timeout journal recovery: credit after (3.336241ms)
+✔ timeout journal recovery: result before (2.144256ms)
+✔ timeout journal recovery: result after (2.741236ms)
+✔ timeout journal recovery: clear before (11.735908ms)
+✔ timeout journal recovery: clear after (4.15716ms)
+✔ rps: the worker updates the original public message without a click and survives restarting (3.643855ms)
+✔ mine: the worker updates the original public message without a click and survives restarting (2.149214ms)
+✔ Discord being offline or refusing edits never postpones settlement or repeats the debit (6.178566ms)
+✔ a slow Discord edit cannot block other rounds from losing at their deadline (3.731264ms)
+✔ deleted messages are not re-sent, and an unbound sent message is recovered by its saved button IDs (10.189451ms)
+✔ a stopped worker cannot settle or edit until it resumes (2.557224ms)
+✔ slash and text commands save their reply identity for automatic timeout edits (3.684004ms)
+✔ a failed safe-turn edit recovers automatically without another click, including after restart (2.815204ms)
+✔ legacy boards stuck on the old bot preview are restored from the saved pair (3.388514ms)
+✔ mine: an unpublished game never incurs an inactivity debit (1.502762ms)
+✔ rps: an unpublished game never incurs an inactivity debit (1.537794ms)
+✔ an undelivered safe turn cancels at expiry rather than fining a player who cannot see the current board (4.828689ms)
+✔ a recovered, confirmed board still applies the normal inactivity loss exactly once (5.028943ms)
+✔ an old display acknowledgement cannot hide an unrendered newer mine turn (2.003289ms)
+✔ expiry during an in-flight old board edit leaves the final result queued for display (16.994029ms)
+✔ a deleted active message closes the challenge and releases its target without charging (2.519209ms)
+✔ old abandoned rounds cannot starve current expiry or impose retroactive debits (30.25999ms)
+✔ the uploaded timedOut result format displays honestly without inventing a mine hit (6.358251ms)
+✔ mine: a confirmed departure cancels durably and cannot become a later inactivity debit (8.290406ms)
+✔ rps: a confirmed departure cancels durably and cannot become a later inactivity debit (1.51513ms)
+✔ all nine rock-paper-scissors outcomes and inclusive random limits are correct (3.828106ms)
+✔ win, loss and both tie directions transfer a percentage of the actual paying balance (0.583348ms)
+✔ fractional amounts round down, zero wallets transfer zero and unsafe balances are rejected (8.83991ms)
+✔ target protection: successful theft (11.193269ms)
+✔ target protection: initiator loses (3.329001ms)
+✔ target protection: tie with a poorer target (2.551356ms)
+✔ target protection: tie with a richer target (2.134142ms)
+✔ target protection: equal balances (4.497321ms)
+✔ target protection: empty target wallet (11.683962ms)
+✔ target protection: rounded transfer is zero (2.342569ms)
+✔ one-hour shield starts at settlement, survives restart and expires at the exact boundary (4.011866ms)
+✔ a protected target can initiate a challenge and unrelated targets remain available (8.459575ms)
+✔ legacy settled rounds remain replayable without creating a retroactive shield (8.989424ms)
+✔ hidden choice and percent are stored before rendering and survive repeat commands and restart (2.882334ms)
+✔ same member must wait a full minute after finishing a robbery before starting another, and the wait survives restart (3.450359ms)
+✔ bad participants, membership, request age, lease and forged round ownership cannot transfer money (3.167283ms)
+✔ payment uses balances at the click, credits immediately and cannot alter activity or earned rewards (12.442699ms)
+✔ concurrent presses with different moves settle exactly once and later presses return the saved result (3.713918ms)
+✔ loss can debit both wallet buckets while recipient earns currency without consuming voice cap (2.090878ms)
+✔ equal-money and sub-unit results persist as completed without fabricating a transfer (3.707709ms)
+✔ an expired challenge is a loss, and a later challenge has its own hidden draw (2.928811ms)
+✔ robbery, shop purchase and administrative debit share one gate and conserve the remaining wallets (19.431693ms)
+✔ a second attacker is refused before play and still cannot bypass the first target shield (2.667627ms)
+✔ robbery interruption recovery: intent before commit (3.951547ms)
+✔ robbery interruption recovery: intent acknowledgement lost (1.73864ms)
+✔ robbery interruption recovery: debit before commit (1.924313ms)
+✔ robbery interruption recovery: debit acknowledgement lost (2.282521ms)
+✔ robbery interruption recovery: credit before commit (2.604345ms)
+✔ robbery interruption recovery: credit acknowledgement lost (1.81344ms)
+✔ robbery interruption recovery: result before commit (22.277512ms)
+✔ robbery interruption recovery: result acknowledgement lost (8.132393ms)
+✔ robbery interruption recovery: clear before commit (13.154942ms)
+✔ robbery interruption recovery: clear acknowledgement lost (8.058463ms)
+✔ lost creation acknowledgement cannot reroll the hidden bot choice after restart (1.73906ms)
+✔ resetting either participant invalidates an open round; settled rounds never replay after resets (5.809903ms)
+✔ a challenge crossing Saudi midnight debits and credits the settlement day only (9.743555ms)
+✔ wallet display waits for both legs and never combines a pending debit with stale totals (19.913271ms)
+✔ upgrade caps an existing twelve-hour theft shield at one hour from its original start without rewriting money (2.015627ms)
+✔ upgrade applies the current automatic shield rule to loss without changing its settled transfer (8.623095ms)
+✔ upgrade applies the current automatic shield rule to tie debiting the target without changing its settled transfer (1.484405ms)
+✔ upgrade applies the current automatic shield rule to equal tie without changing its settled transfer (1.797697ms)
+✔ an obsolete tie shield cannot hide the latest effective winning shield (11.911486ms)
+✔ upgrade recovery applies the current shield rule to an old pending paper result (1.908099ms)
+✔ upgrade recovery applies the current shield rule to an old pending scissors result (2.80582ms)
+✔ upgrade recovery applies the current shield rule to an old pending rock result (1.707834ms)
+ℹ tests 144
+ℹ suites 0
+ℹ pass 129
+ℹ fail 15
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1318.297001
+
+✖ failing tests:
+
+test at test/command-latency.test.js:13:1
+✖ new voice observations cannot extend the currently saving batch ahead of the ninth member (6.759061ms)
+  AssertionError [ERR_ASSERTION]: 0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 0:15000, 1:15000, 2:15000, 3:15000, 4:15000, 5:15000, 6:15000, 7:15000, 8:0, 8:15000
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/command-latency.test.js:26:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test/command-latency.test.js:30:3
+✖ a slow idle xo scan does not block a balance command (14.030216ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/command-latency.test.js:57:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/command-latency.test.js:30:3
+✖ a slow idle buttonGame scan does not block a balance command (4.731476ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/command-latency.test.js:57:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/command-latency.test.js:30:3
+✖ a slow idle mini scan does not block a balance command (4.417404ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/command-latency.test.js:57:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/command-latency.test.js:30:3
+✖ a slow idle memory scan does not block a balance command (3.964677ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/command-latency.test.js:57:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/command-latency.test.js:30:3
+✖ a slow idle robbery scan does not block a balance command (3.906672ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/command-latency.test.js:57:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/command-latency.test.js:61:1
+✖ a requester can flush their own observed voice time while another member has a slow save (1.576471ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/command-latency.test.js:77:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/command-latency.test.js:82:1
+✖ irrelevant voice-state changes create no extra writes and leaving still stops time exactly (4.11616ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  102 !== 2
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/command-latency.test.js:95:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 102,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/command-latency.test.js:100:3
+✖ public quest cards edit only when their displayed progress changes (53.048439ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/command-latency.test.js:111:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/command-latency.test.js:100:3
+✖ private quest cards edit only when their displayed progress changes (12.545104ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/command-latency.test.js:111:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/robbery-commands.test.js:71:1
+✖ a member cannot start a second robbery command while the first challenge is open (3.26009ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /تم منعك من النهب لمدة 5 دقائق/. Input:
+  
+  '❌ تم منعك من النهب بسبب السبام؛ مدة المنع الأساسية 5 دقائق. تقدر تستخدمه مجددًا <t:1789077900:R>.'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/robbery-commands.test.js:79:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '❌ تم منعك من النهب بسبب السبام؛ مدة المنع الأساسية 5 دقائق. تقدر تستخدمه مجددًا <t:1789077900:R>.',
+    expected: /تم منعك من النهب لمدة 5 دقائق/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at test/robbery-commands.test.js:142:1
+✖ a protected target gets the reference reply with its remaining minutes and seconds and no currency changes (4.501317ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /تم منعك من النهب لمدة 5 دقائق/. Input:
+  
+  '❌ تم منعك من النهب بسبب السبام؛ مدة المنع الأساسية 5 دقائق. تقدر تستخدمه مجددًا <t:1789077900:R>.'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/robbery-commands.test.js:159:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '❌ تم منعك من النهب بسبب السبام؛ مدة المنع الأساسية 5 دقائق. تقدر تستخدمه مجددًا <t:1789077900:R>.',
+    expected: /تم منعك من النهب لمدة 5 دقائق/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at test/robbery-mine.test.js:99:4
+✖ mine loss, amount 0: settles once, keeps current protection, and stages both DMs (1.190193ms)
+  Error: لا تقدر تبدأ نهب ورصيدك صفر أو بالسالب؛ تحتاج رصيدًا أكبر من صفر.
+      at file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/src/service.js:439:95
+
+test at test/robbery-timeout.test.js:82:1
+✖ timeout uses available balances, including an empty wallet, without counting it as a tie (6.025325ms)
+  Error: لا تقدر تبدأ نهب ورصيدك صفر أو بالسالب؛ تحتاج رصيدًا أكبر من صفر.
+      at file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/src/service.js:439:95
+
+test at test/robbery-timeout.test.js:109:1
+✖ the same target accepts only the first concurrent attacker, across both game types and restart (10.879337ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/latency-baseline/GAME-V64-main/test/robbery-timeout.test.js:114:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

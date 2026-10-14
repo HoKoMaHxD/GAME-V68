@@ -1,0 +1,47 @@
+{
+  "environment": "Local simulated member responses; no Discord login or production data.",
+  "cases": [
+    {
+      "scenario": "bulk-timeout",
+      "before": {
+        "ready": false,
+        "eligible": [],
+        "bulkRequests": 1,
+        "directRequests": 0,
+        "error": "GuildMembersTimeout"
+      },
+      "after": {
+        "ready": true,
+        "eligible": [
+          "alice",
+          "bob"
+        ],
+        "bulkRequests": 1,
+        "directRequests": 2,
+        "error": null
+      }
+    },
+    {
+      "scenario": "missing-bulk-row",
+      "before": {
+        "ready": true,
+        "eligible": [
+          "alice"
+        ],
+        "bulkRequests": 1,
+        "directRequests": 0,
+        "error": null
+      },
+      "after": {
+        "ready": true,
+        "eligible": [
+          "alice",
+          "bob"
+        ],
+        "bulkRequests": 1,
+        "directRequests": 1,
+        "error": null
+      }
+    }
+  ]
+}

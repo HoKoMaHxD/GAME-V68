@@ -1,0 +1,16 @@
+✔ production audit path preserves challenge payouts and stores both outcomes (19.103621ms)
+✔ financial embed renders real newlines and fits Discord field limits (19.857575ms)
+✔ xo: audit-enabled settlement and journal replay keep balances and outcomes unique (7.980126ms)
+✔ buttonGame: audit-enabled settlement and journal replay keep balances and outcomes unique (5.650223ms)
+✔ minesGame: audit-enabled settlement and journal replay keep balances and outcomes unique (5.682028ms)
+✔ numbersGame: audit-enabled settlement and journal replay keep balances and outcomes unique (5.589825ms)
+✔ full reset of zero balances invalidates open leaderboard membership (1.559445ms)
+✔ full reset archives audit before deletion and recreated day produces new IDs (2.091473ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1220.837509

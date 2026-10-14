@@ -1,0 +1,121 @@
+✖ a leave observed during a slow save survives a subsequent disconnect (9.35445ms)
+✖ snapshot and attendance rules are frozen at receipt, even when the cache objects mutate (3.930425ms)
+✖ a delayed older observation cannot rewind time or restore a departed member (0.792251ms)
+✖ a genuinely unobserved gap is reported and never replaced with guessed attendance (2.951579ms)
+✔ 18:13–18:52 credits exactly 39 minutes despite an 11-minute save delay; minute 40 pays once (304.621357ms)
+✖ manual quest refresh saves the current observed interval before reading the counter (38.399067ms)
+✖ an expired private card explicitly labels stale progress and shows its last refresh time (8.617493ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 1
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1593.567615
+
+✖ failing tests:
+
+test at test/voice-observation.test.js:17:1
+✖ a leave observed during a slow save survives a subsequent disconnect (9.35445ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  30000 !== 45000
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/work/GAME-V63-main/test/voice-observation.test.js:34:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 30000,
+    expected: 45000,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/voice-observation.test.js:38:1
+✖ snapshot and attendance rules are frozen at receipt, even when the cache objects mutate (3.930425ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'other'
+  - '100000000000000070'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/work/GAME-V63-main/test/voice-observation.test.js:47:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'other',
+    expected: '100000000000000070',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/voice-observation.test.js:51:1
+✖ a delayed older observation cannot rewind time or restore a departed member (0.792251ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  60000 !== 30000
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/work/GAME-V63-main/test/voice-observation.test.js:58:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 60000,
+    expected: 30000,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/voice-observation.test.js:61:1
+✖ a genuinely unobserved gap is reported and never replaced with guessed attendance (2.951579ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/work/GAME-V63-main/test/voice-observation.test.js:68:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/voice-observation.test.js:105:1
+✖ manual quest refresh saves the current observed interval before reading the counter (38.399067ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 60000
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/work/GAME-V63-main/test/voice-observation.test.js:121:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 60000,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/voice-observation.test.js:125:1
+✖ an expired private card explicitly labels stale progress and shows its last refresh time (8.617493ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /توقف تحديث هذه البطاقة/. Input:
+  
+  'اضغط تحديث المهام لاستئناف التحديث، أو استخدم /مهامي لبطاقة مستمرة'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/f16d82d3dab5/work/GAME-V63-main/test/voice-observation.test.js:128:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'اضغط تحديث المهام لاستئناف التحديث، أو استخدم /مهامي لبطاقة مستمرة',
+    expected: /توقف تحديث هذه البطاقة/,
+    operator: 'match',
+    diff: 'simple'
+  }

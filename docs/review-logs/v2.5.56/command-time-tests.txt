@@ -1,0 +1,12 @@
+✔ وقت reads a new member without assigning tasks, creating days or writing anything (13.40502ms)
+✔ salary and prize deadlines persist across midnight and restart and become ready at their exact boundaries (6.621966ms)
+✔ disabled commands and quest ineligibility are not shown as ready (2.850895ms)
+✔ protection reports the full stacked expiration and allows buying more while protected (4.682324ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 584.088686

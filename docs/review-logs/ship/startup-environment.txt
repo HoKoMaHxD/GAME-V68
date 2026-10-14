@@ -1,0 +1,100 @@
+✔ boot banner precedes module loading and unsupported Node fails without loading the application (7.686462ms)
+✔ an early missing module and a synchronous constructor error retain their stage and code (1.396862ms)
+✔ error details redact normalized tokens, database credentials, headers and stack locations before truncation (0.817336ms)
+✔ logger also redacts unknown database URLs and token-shaped strings and bounds circular causes (0.372713ms)
+✖ real node src/index.js reports a missing configuration variable and exits nonzero without connecting (616.053354ms)
+✖ real entry catches MongoClient constructor failures that occur before the main startup try block (571.509843ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 4
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1204.934373
+
+✖ failing tests:
+
+test at test/startup.test.js:77:1
+✖ real node src/index.js reports a missing configuration variable and exits nonzero without connecting (616.053354ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + Error: spawnSync /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node EPERM
+  +     at Object.spawnSync (node:internal/child_process:1160:20)
+  +     at spawnSync (node:child_process:928:24)
+  +     at runEntry (file:///workspace/scratch/28690ced7ddc/work/GAME-V45-main/test/startup.test.js:16:18)
+  +     at TestContext.<anonymous> (file:///workspace/scratch/28690ced7ddc/work/GAME-V45-main/test/startup.test.js:78:18)
+  +     at Test.runInAsyncScope (node:async_hooks:227:14)
+  +     at Test.run (node:internal/test_runner/test:1382:25)
+  +     at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+  +     at Test.postRun (node:internal/test_runner/test:1522:19)
+  +     at Test.run (node:internal/test_runner/test:1447:12)
+  +     at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+  +   code: 'EPERM',
+  +   errno: -1,
+  +   path: '/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node',
+  +   spawnargs: [
+  +     'src/index.js'
+  +   ],
+  +   syscall: 'spawnSync /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node'
+  + }
+  - undefined
+  
+      at runEntry (file:///workspace/scratch/28690ced7ddc/work/GAME-V45-main/test/startup.test.js:18:10)
+      at TestContext.<anonymous> (file:///workspace/scratch/28690ced7ddc/work/GAME-V45-main/test/startup.test.js:78:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Error],
+    expected: undefined,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test/startup.test.js:85:1
+✖ real entry catches MongoClient constructor failures that occur before the main startup try block (571.509843ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + Error: spawnSync /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node EPERM
+  +     at Object.spawnSync (node:internal/child_process:1160:20)
+  +     at spawnSync (node:child_process:928:24)
+  +     at runEntry (file:///workspace/scratch/28690ced7ddc/work/GAME-V45-main/test/startup.test.js:16:18)
+  +     at TestContext.<anonymous> (file:///workspace/scratch/28690ced7ddc/work/GAME-V45-main/test/startup.test.js:86:18)
+  +     at Test.runInAsyncScope (node:async_hooks:227:14)
+  +     at Test.run (node:internal/test_runner/test:1382:25)
+  +     at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+  +     at Test.postRun (node:internal/test_runner/test:1522:19)
+  +     at Test.run (node:internal/test_runner/test:1447:12)
+  +     at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+  +   code: 'EPERM',
+  +   errno: -1,
+  +   path: '/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node',
+  +   spawnargs: [
+  +     'src/index.js'
+  +   ],
+  +   syscall: 'spawnSync /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node'
+  + }
+  - undefined
+  
+      at runEntry (file:///workspace/scratch/28690ced7ddc/work/GAME-V45-main/test/startup.test.js:18:10)
+      at TestContext.<anonymous> (file:///workspace/scratch/28690ced7ddc/work/GAME-V45-main/test/startup.test.js:86:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Error],
+    expected: undefined,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

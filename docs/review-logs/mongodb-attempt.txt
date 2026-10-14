@@ -1,0 +1,53 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> clan-quests-bot@2.5.29 test:db
+> node --env-file-if-exists=.env --test test/database.integration.js test/auction.database.integration.js
+
+.env not found. Continuing without it.
+.env not found. Continuing without it.
+Downloading MongoDB "8.2.6": 0% (0mb / 122.6mb)
+Downloading MongoDB "8.2.6": 97.4% (119.4mb / 122.6mb)
+Downloading MongoDB "8.2.6": 100% (122.6mb / 122.6mb)
+Downloading MongoDB "8.2.6": 100% (0mb / 0mb)
+Downloading MongoDB "8.2.6": 100% (0mb / 0mb)
+Starting the MongoMemoryServer Instance failed, enable debug log for more information. Error:
+ UnexpectedCloseError: Instance closed unexpectedly with code "100" and signal "null"
+    at MongoInstance.closeHandler (/workspace/scratch/90c269b7ee2d/project/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:332:58)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1141:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+✖ real standalone MongoDB: auction holds, partial transfer recovery, settlement and audit (29661.676433ms)
+.env not found. Continuing without it.
+Starting the MongoMemoryServer Instance failed, enable debug log for more information. Error:
+ UnexpectedCloseError: Instance closed unexpectedly with code "100" and signal "null"
+    at MongoInstance.closeHandler (/workspace/scratch/90c269b7ee2d/project/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:332:58)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1141:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+✖ real local MongoDB: atomic credits, duplicate events, leases, restart and rankings (30148.922109ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31004.795606
+
+✖ failing tests:
+
+test at test/auction.database.integration.js:13:1
+✖ real standalone MongoDB: auction holds, partial transfer recovery, settlement and audit (29661.676433ms)
+  Error: Instance closed unexpectedly with code "100" and signal "null"
+      at MongoInstance.closeHandler (/workspace/scratch/90c269b7ee2d/project/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:332:58)
+      at ChildProcess.emit (node:events:509:28)
+      at maybeClose (node:internal/child_process:1141:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+
+test at test/database.integration.js:11:1
+✖ real local MongoDB: atomic credits, duplicate events, leases, restart and rankings (30148.922109ms)
+  Error: Instance closed unexpectedly with code "100" and signal "null"
+      at MongoInstance.closeHandler (/workspace/scratch/90c269b7ee2d/project/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:332:58)
+      at ChildProcess.emit (node:events:509:28)
+      at maybeClose (node:internal/child_process:1141:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:306:5)

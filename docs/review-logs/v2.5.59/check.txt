@@ -1,0 +1,2 @@
+Command: node scripts/check.js
+Syntax checks passed.

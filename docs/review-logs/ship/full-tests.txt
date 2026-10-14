@@ -1,0 +1,107 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> clan-quests-bot@2.5.51 test
+> node --test test/*.test.js
+
+✔ test/activity-economy.test.js (601.648083ms)
+✔ test/auction-commands.test.js (811.601196ms)
+✔ test/auction-manager.test.js (630.226721ms)
+✔ test/auction.test.js (634.729164ms)
+✔ test/auth.test.js (116.122652ms)
+✔ test/bank-commands.test.js (919.444908ms)
+✔ test/bank-live-views.test.js (77.85553ms)
+✔ test/bank-menu.test.js (814.264603ms)
+✔ test/bank.test.js (552.517607ms)
+✔ test/booster-salary.test.js (793.988033ms)
+✔ test/boxes-game.test.js (1294.321534ms)
+✔ test/button-game.test.js (603.452401ms)
+✔ test/challenger-cooldown.test.js (548.152168ms)
+✖ test/command-times.test.js (562.035718ms)
+✔ test/commands.test.js (1054.328858ms)
+✔ test/daily-quests.test.js (1215.982396ms)
+✔ test/daily-rewards.test.js (545.076049ms)
+✔ test/daily-views.test.js (654.783735ms)
+✔ test/domain.test.js (456.011552ms)
+✔ test/dot-game.test.js (1081.073815ms)
+✔ test/experience-commands.test.js (688.847833ms)
+✔ test/financial-log.test.js (467.735678ms)
+✔ test/game-interactions.test.js (853.691207ms)
+✔ test/games.test.js (921.252286ms)
+✔ test/infinite-xo.test.js (526.60468ms)
+✖ test/member-notifications.test.js (947.070583ms)
+✔ test/membership.test.js (393.334345ms)
+✔ test/memory-game.test.js (537.17645ms)
+✔ test/message-counting.test.js (900.312275ms)
+✔ test/migration.test.js (442.150504ms)
+✔ test/mines-game.test.js (521.89667ms)
+✔ test/mini-games.test.js (677.286535ms)
+✔ test/nonnegative-balance.test.js (494.297495ms)
+✔ test/numbers-game.test.js (590.228953ms)
+✔ test/panel.test.js (685.354568ms)
+✔ test/permissions.test.js (809.094283ms)
+✔ test/point-commands.test.js (619.296816ms)
+✔ test/positive-balance.test.js (452.611942ms)
+✔ test/presentation.test.js (697.003567ms)
+✔ test/prizes.test.js (431.51734ms)
+✔ test/protection.test.js (582.425222ms)
+✔ test/quests.test.js (394.702341ms)
+✔ test/reset-commands.test.js (790.739361ms)
+✔ test/reset.test.js (484.598235ms)
+✔ test/review-financial.test.js (487.440803ms)
+✖ test/robbery-commands.test.js (920.441106ms)
+✖ test/robbery-mine.test.js (629.328372ms)
+✔ test/robbery-rates.test.js (504.090147ms)
+✔ test/robbery-spam.test.js (789.204497ms)
+✖ test/robbery-timeout.test.js (641.589559ms)
+✔ test/robbery.test.js (607.481215ms)
+✔ test/runtime-control.test.js (794.042951ms)
+✔ test/scoped-reset.test.js (559.668043ms)
+✔ test/sheikh-spam.test.js (439.696446ms)
+✔ test/ship-game.test.js (1836.418667ms)
+✔ test/shop-commands.test.js (776.365998ms)
+✔ test/shop-notifications.test.js (406.323303ms)
+✔ test/shop.test.js (541.692042ms)
+✔ test/spam-settings.test.js (674.189705ms)
+✔ test/special-tasks.test.js (765.673599ms)
+✖ test/startup.test.js (1502.924585ms)
+✔ test/store.test.js (420.434416ms)
+✔ test/task-boost.test.js (475.886023ms)
+✔ test/time-launcher.test.js (719.564025ms)
+✔ test/voice-attendance-private.test.js (827.917468ms)
+✔ test/voice-channels.test.js (620.542041ms)
+✔ test/voice-retry.test.js (335.36864ms)
+✔ test/xo.test.js (549.841034ms)
+ℹ tests 68
+ℹ suites 0
+ℹ pass 62
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6886.377859
+
+✖ failing tests:
+
+test at test/command-times.test.js:1:1
+✖ test/command-times.test.js (562.035718ms)
+  'test failed'
+
+test at test/member-notifications.test.js:1:1
+✖ test/member-notifications.test.js (947.070583ms)
+  'test failed'
+
+test at test/robbery-commands.test.js:1:1
+✖ test/robbery-commands.test.js (920.441106ms)
+  'test failed'
+
+test at test/robbery-mine.test.js:1:1
+✖ test/robbery-mine.test.js (629.328372ms)
+  'test failed'
+
+test at test/robbery-timeout.test.js:1:1
+✖ test/robbery-timeout.test.js (641.589559ms)
+  'test failed'
+
+test at test/startup.test.js:1:1
+✖ test/startup.test.js (1502.924585ms)
+  'test failed'

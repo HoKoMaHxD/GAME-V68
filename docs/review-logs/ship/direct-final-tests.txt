@@ -1,0 +1,34 @@
+✔ random layouts cover all six reference ships, remain in bounds and never touch or overlap (24.346521ms)
+✔ carrier requires every one of its ten squares; misses and duplicate coordinates behave correctly (0.617343ms)
+✔ invalid challenges and unauthorized accept cannot reserve money (8.920706ms)
+✔ accept rechecks balance; insufficient funds never debit the other party (2.422995ms)
+✔ setup is private, independently versioned and locks each fleet only after its owner is ready (4.546458ms)
+✔ simultaneous readiness starts once with both locked fleets intact (2.10894ms)
+✔ setup timeout refunds both players; randomization and opening private views never extend it (4.017387ms)
+✔ miss switches turn; hit and sunk ship retain it; navigation does not buy time (4.108826ms)
+✔ full six-ship victory pays the winner once and restart cannot replay the payout (17.098206ms)
+✔ wrong turns, spectators, stale controls, copied main messages and repeat targets cannot fire (3.936025ms)
+✔ delivered turn timeout loses once; undelivered board cancels with a refund (4.75309ms)
+✔ restart preserves private layouts, preparation readiness, shots and exact turn (2.319288ms)
+✔ hold interruption before wallet write recovers exactly once (2.177634ms)
+✔ payout interruption before wallet write recovers exactly once (18.798168ms)
+✔ hold interruption after wallet write recovers exactly once (1.424635ms)
+✔ payout interruption after wallet write recovers exactly once (13.311808ms)
+✔ settings or membership changes cancel and refund; resets protect preparation stakes (5.472629ms)
+✔ public image never reveals unhit ships; private rendering never includes the opponent fleet (251.424968ms)
+✔ public controls fit Discord, disable fired cells, and private controls do not contain coordinates (72.261007ms)
+✔ registration, menu, text commands, help and cooldown view expose سفينة (13.270306ms)
+✔ real handler opens accepting player privately, each owner prepares privately, then plays on main message (286.92294ms)
+✔ private request rejects spectators and forged public copies without leaking attachments (37.231814ms)
+✔ background manager refunds deleted public messages and clears dirty final messages (3.254273ms)
+✔ paused bot acknowledges ship select menus and never mutates its round (3.520516ms)
+✔ ship button is acknowledged before a slow Discord membership lookup and leaves wallet queue free (43.754062ms)
+✔ private view edits never acknowledge a failed public delivery; background retry restores the same state (140.416264ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 989.209306

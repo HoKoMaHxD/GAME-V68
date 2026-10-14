@@ -1,0 +1,8 @@
+{
+  "scenario": "18:13:00–18:52:00 Asia/Riyadh; first persistence request delayed from 18:13:15 until 18:24:00 while observation remains available",
+  "actual_minutes": 39,
+  "original_credited_minutes": 28,
+  "fixed_credited_minutes": 39,
+  "verification": "Executed each version's actual application polling callback and VoiceTracker with a simulated clock and persistence service",
+  "live_test": false
+}

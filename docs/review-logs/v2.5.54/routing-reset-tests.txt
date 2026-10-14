@@ -1,0 +1,37 @@
+✔ bank launcher has one line and exact six-button order in valid rows (4.772346ms)
+✔ all six menu buttons open private views for the clicking member (33.615119ms)
+✔ game menu buttons start both games through the existing cooldown flow (44.256816ms)
+✔ menu rejects foreign guilds and wrong bank channels (2.707348ms)
+✔ all slash commands serialize with valid names and manageable options (19.963374ms)
+✔ administration is discoverable for delegated roles and guarded at runtime (5.005939ms)
+✔ maximum-size task embed fits Discord 6000-character limit (6.151899ms)
+✔ both installed client libraries initialize without logging in (43.662029ms)
+✔ source validation uses a permission bit compatible with both libraries (0.673337ms)
+✔ unauthorized admin command does not mutate state (9.76846ms)
+✔ full reset bulk-clears all operational data, old journals and holds only in this clan, then resumes (32.683611ms)
+✔ an active ship stake and cooldown are removed without waiting for players; new activity works (26.814679ms)
+✔ only issued writes are drained; an old hung service queue cannot hang reset or subsequent commands (8.336287ms)
+✔ an issued write finishes before deletion and old continuations cannot recreate money or block the new bot (16.488067ms)
+✔ a late Discord response after successful reset cannot create documents through the old work context (7.756142ms)
+✔ partial deletion stays stopped; restart completes saved scope before financial recovery and includes downtime in cutoff (21.236146ms)
+✔ a failed deletion retries automatically then resumes and calls completion exactly once (10.737033ms)
+✔ lost final acknowledgement is verified without deleting post-reset activity on duplicate requests (6.652756ms)
+✔ an unfinished stock reservation is returned once while products and preferences stay configured (10.937315ms)
+✔ invalid reset scope cannot pause or erase anyone, and lease ownership is mandatory (6.777252ms)
+✔ runtime command exposes stop/start and persists stop through process restart (25.643868ms)
+✔ resume fences stopped activity, keeps balances, clears pause only after boundaries reset (4.021623ms)
+✔ lost switch acknowledgement is recovered; stale requests cannot reverse a newer switch (1.393564ms)
+✔ unauthorized member cannot toggle; recovery command remains accessible while paused (6.190598ms)
+✔ slow background jobs cannot hang stop/start replies or the following control command (1.468197ms)
+✔ control stays available while a prior accounting operation is waiting on I/O (2.252841ms)
+✔ background startup failure is reported without reverting the persisted control state (6.532815ms)
+✔ same-state and duplicate control commands never rerun resume hooks (1.378561ms)
+✔ control bounds database I/O and a failed switch does not block the next command (1.33782ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1608.601022

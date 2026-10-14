@@ -1,0 +1,311 @@
+✖ a slow background edit cannot overwrite a newer dice result or delay its acknowledgement (29.433708ms)
+✖ starting an open solo game again links to its original message instead of moving the buttons (3.131113ms)
+✖ dice: an old copied message cannot steal the live round (1.408264ms)
+✖ memory: an old copied message cannot steal the live round (1.939395ms)
+✖ rapid memory presses consume one card and explain a rejected stale press (5.670303ms)
+✔ a transient memory edit failure is retried and unmatched cards become playable again (4.677445ms)
+✖ one stalled Discord message cannot block other memory boards or the next expiry tick (4.880652ms)
+✖ xo: a stale button refreshes the board without spending a move or changing balances (4.110931ms)
+✖ xo: slow membership lookup does not hold the shared economy queue (3.859031ms)
+✖ button-game: a stale button refreshes the board without spending a move or changing balances (3.429854ms)
+✖ button-game: slow membership lookup does not hold the shared economy queue (7.803405ms)
+✖ mines: a stale button refreshes the board without spending a move or changing balances (2.217515ms)
+✖ mines: slow membership lookup does not hold the shared economy queue (1.893717ms)
+✖ numbers: a stale button refreshes the board without spending a move or changing balances (1.992025ms)
+✖ numbers: slow membership lookup does not hold the shared economy queue (1.79684ms)
+✖ dot: a stale button refreshes the board without spending a move or changing balances (2.38624ms)
+✖ dot: slow membership lookup does not hold the shared economy queue (2.575425ms)
+✖ a queued background XO snapshot is skipped after the player already displayed that revision (2.986074ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 1
+ℹ fail 17
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 634.409555
+
+✖ failing tests:
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:38:1
+✖ a slow background edit cannot overwrite a newer dice result or delay its acknowledgement (29.433708ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(buttons(visible).every(b => b.disabled))
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:58:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:63:1
+✖ starting an open solo game again links to its original message instead of moving the buttons (3.131113ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '1547728374988800999'
+  - '1547728374988800101'
+                     ^
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:68:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '1547728374988800999',
+    expected: '1547728374988800101',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:72:40
+✖ dice: an old copied message cannot steal the live round (1.408264ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '1547728374988800999'
+  - '1547728374988800101'
+                     ^
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:75:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '1547728374988800999',
+    expected: '1547728374988800101',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:72:40
+✖ memory: an old copied message cannot steal the live round (1.939395ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '1547728374988800999'
+  - '1547728374988800101'
+                     ^
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:75:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '1547728374988800999',
+    expected: '1547728374988800101',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:81:1
+✖ rapid memory presses consume one card and explain a rejected stale press (5.670303ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  undefined !== 64
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:91:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 64,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:116:1
+✖ one stalled Discord message cannot block other memory boards or the next expiry tick (4.880652ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:130:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:152:3
+✖ xo: a stale button refreshes the board without spending a move or changing balances (4.110931ms)
+  AssertionError [ERR_ASSERTION]: the stale public board must be repaired
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:157:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:163:3
+✖ xo: slow membership lookup does not hold the shared economy queue (3.859031ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:173:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:152:3
+✖ button-game: a stale button refreshes the board without spending a move or changing balances (3.429854ms)
+  AssertionError [ERR_ASSERTION]: the stale public board must be repaired
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:157:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:163:3
+✖ button-game: slow membership lookup does not hold the shared economy queue (7.803405ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:173:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:152:3
+✖ mines: a stale button refreshes the board without spending a move or changing balances (2.217515ms)
+  AssertionError [ERR_ASSERTION]: the stale public board must be repaired
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:157:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:163:3
+✖ mines: slow membership lookup does not hold the shared economy queue (1.893717ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:173:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:152:3
+✖ numbers: a stale button refreshes the board without spending a move or changing balances (1.992025ms)
+  AssertionError [ERR_ASSERTION]: the stale public board must be repaired
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:157:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:163:3
+✖ numbers: slow membership lookup does not hold the shared economy queue (1.79684ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:173:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:152:3
+✖ dot: a stale button refreshes the board without spending a move or changing balances (2.38624ms)
+  AssertionError [ERR_ASSERTION]: the stale public board must be repaired
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:157:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:163:3
+✖ dot: slow membership lookup does not hold the shared economy queue (2.575425ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:173:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../baseline-check/GAME-V39-main/test/game-interactions.test.js:177:1
+✖ a queued background XO snapshot is skipped after the player already displayed that revision (2.986074ms)
+  AssertionError [ERR_ASSERTION]: do not resend an already displayed board on every dirty snapshot
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file://test/game-interactions.test.js:186:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

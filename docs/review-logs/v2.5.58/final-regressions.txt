@@ -1,0 +1,31 @@
+✔ new voice observations cannot extend the currently saving batch ahead of the ninth member (5.842174ms)
+✔ a slow idle xo scan does not block a balance command (7.761768ms)
+✔ a slow idle buttonGame scan does not block a balance command (2.014313ms)
+✔ a slow idle mini scan does not block a balance command (2.092758ms)
+✔ a slow idle memory scan does not block a balance command (1.565132ms)
+✔ a slow idle robbery scan does not block a balance command (2.599523ms)
+✔ a requester can flush their own observed voice time while another member has a slow save (0.766938ms)
+✔ irrelevant voice-state changes create no extra writes and leaving still stops time exactly (1.022023ms)
+✔ public quest cards edit only when their displayed progress changes (23.812959ms)
+✔ private quest cards edit only when their displayed progress changes (4.637613ms)
+✔ idle robbery discovery still blocks an unresolved financial journal (1.413379ms)
+✔ shutdown drains every interval in a manual refresh, including its later writes (1.925813ms)
+✔ a leave observed during a slow save survives a subsequent disconnect (3.509823ms)
+✔ snapshot and attendance rules are frozen at receipt, even when the cache objects mutate (0.364947ms)
+✔ a delayed older observation cannot rewind time or restore a departed member (2.562068ms)
+✔ a genuinely unobserved gap is reported and never replaced with guessed attendance (0.886574ms)
+✔ 18:13–18:52 credits exactly 39 minutes despite an 11-minute save delay; minute 40 pays once (67.040111ms)
+✔ manual quest refresh saves the current observed interval before reading the counter (14.517955ms)
+✔ an expired private card explicitly labels stale progress and shows its last refresh time (2.317519ms)
+✔ one failed member cannot discard other members or credit departed time (1.848208ms)
+✔ committed interval with lost acknowledgment retries without duplicate time (0.395752ms)
+✔ slow member does not prevent another member starting its save (3.538024ms)
+✔ pending known time survives disconnect without counting disconnected gap (0.644067ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 506.398797

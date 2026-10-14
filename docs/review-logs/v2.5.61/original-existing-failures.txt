@@ -1,0 +1,203 @@
+✔ وقت reads a new member without assigning tasks, creating days or writing anything (9.901843ms)
+✔ salary and prize deadlines persist across midnight and restart and become ready at their exact boundaries (7.513923ms)
+✔ disabled commands and quest ineligibility are not shown as ready (3.745951ms)
+✔ protection reports the full stacked expiration and allows buying more while protected (6.328281ms)
+✖ robbery reports an open challenge and ignores expired or invalidated challenges (1.618253ms)
+✔ remaining time rounds up a partial second and public payloads never ping members (2.403884ms)
+✔ preferences default on; per-member toggles are persistent, idempotent and survive reset/restart (8.640078ms)
+✔ notification button toggles only the clicker and replies privately without editing the public panel (6.606987ms)
+✔ salary and prize receipts and readiness notify once through retries and restart without paying again (15.026919ms)
+✔ a new salary claim invalidates the previous ready reminder and disabled salary does not starve prize alerts (6.165594ms)
+✔ opt-out suppresses all due alerts; re-enabling never replays muted history but preserves future timers (7.106007ms)
+✔ DM-closed members keep their preferences and money, and failures do not affect other members (3.681832ms)
+✔ ambiguous network acknowledgement recovers the existing DM after restart without duplicates (2.663852ms)
+✔ ambiguous database acknowledgement recovers the existing DM after restart without duplicates (2.76835ms)
+✔ known failed sends back off then recover, and incomplete history never causes a blind duplicate retry (5.768627ms)
+✔ event staging shares the salary commit and outbox materialization can be retried safely (3.620149ms)
+✔ robbery win with target balance 10000 alerts both sides, including zero transfers (6.411784ms)
+✔ robbery loss with target balance 10000 alerts both sides, including zero transfers (3.159437ms)
+✔ robbery tie with target balance 10000 alerts both sides, including zero transfers (7.512408ms)
+✔ robbery tie with target balance 20000 alerts both sides, including zero transfers (2.437212ms)
+✔ robbery win with target balance 0 alerts both sides, including zero transfers (2.957273ms)
+✖ a target's 15-minute failed-robbery shield sends its expiry DM, attacker balance 0 (0.826232ms)
+✔ a target's 15-minute failed-robbery shield sends its expiry DM, attacker balance 1000 (4.505294ms)
+✔ stacked protection only reports its final expiration and preserves the paid duration across restart (4.31241ms)
+✔ downtime spanning several superseded shields still produces one final protection expiry (3.027679ms)
+✔ losing the worker lease stops notification collection and sending (1.014585ms)
+✔ store purchases, administrative balance changes and scoped resets notify without altering financial outcomes (5.734877ms)
+✔ auction start, outbid refund and winner notifications use committed outcomes (7.747691ms)
+✔ auction start, outbid refund and cancellation notifications use committed outcomes (12.155184ms)
+✔ first upgrade schedules only future existing timers, without sending historical receipts (1.726124ms)
+✔ no-mutual-guild DM failures are finalized without error logs or retry loops (1.380314ms)
+✔ missing members, lost readiness and expired reminders never cause DMs or change earned balances (1.45061ms)
+✔ opting out waits for an in-flight send, then prevents any later notification (2.752956ms)
+✔ DM payloads escape member-controlled content and fit Discord limits (0.479821ms)
+✔ slash robbery has exactly one required member and commands panel lists its reference description (12.783107ms)
+✔ public challenge contains only the three player options and no hidden bot move or selected rate (14.243351ms)
+✖ a member cannot start a second robbery command while the first challenge is open (3.250905ms)
+✔ victim and other members cannot press, and a forged owner in the custom ID still cannot settle (3.901783ms)
+✔ owner selection reveals both moves, pays once and edits the public challenge with disabled buttons (7.302202ms)
+✔ failed theft displays a 15-minute target shield while ties display none (4.43218ms)
+✖ a protected target gets the reference reply with its remaining minutes and seconds and no currency changes (7.231656ms)
+✔ bang command resolves the mentioned member and cannot start for bots, webhook or another guild (3.039758ms)
+✔ missing, self, bot, ineligible and foreign-server targets never create a challenge (1.184079ms)
+✔ an uncertain payment leaves the public challenge intact and reports privately for recovery (1.391871ms)
+✔ failed Discord result edit does not refund or repeat the already committed transfer (2.387477ms)
+✔ all result variants fit embed limits, retain the footer brand and disable completed choices (4.147823ms)
+✔ wallet and task views disclose net robbery while activity and attendance caps stay separate (3.021871ms)
+✔ random game selection covers both games and commits one hidden mine and a complete bot order (2.798296ms)
+✔ every possible mine gives exactly one loser within nine alternating picks and can never tie (1.737992ms)
+✔ bot order is independent of the mine and does not skip it (0.311609ms)
+✔ safe turns persist without touching either balance and survive restart without rerolling (10.87124ms)
+✔ simultaneous different clicks from one board consume only one player/bot turn (4.551932ms)
+✔ mine win, amount 600: settles once, keeps current protection, and stages both DMs (8.040635ms)
+✔ mine loss, amount 600: settles once, keeps current protection, and stages both DMs (6.307961ms)
+✔ mine win, amount 0: settles once, keeps current protection, and stages both DMs (4.585632ms)
+✖ mine loss, amount 0: settles once, keeps current protection, and stages both DMs (1.250219ms)
+✔ ownership, room, membership, stale cells, cross-game buttons, and bad input cannot spend or advance (3.872821ms)
+✔ target protection, bank changes and resets stop ongoing mine turns without a transfer (5.574649ms)
+✔ legacy RPS rounds remain playable and mine buttons cannot select a different game (4.074263ms)
+✔ safe-turn before-write interruption preserves the original board or committed pair (2.286957ms)
+✔ safe-turn after-write interruption preserves the original board or committed pair (1.647667ms)
+✔ mine settlement recovery: reserve before (5.126886ms)
+✔ mine settlement recovery: reserve after (1.682859ms)
+✔ mine settlement recovery: debit before (1.44416ms)
+✔ mine settlement recovery: debit after (1.55681ms)
+✔ mine settlement recovery: credit before (1.622699ms)
+✔ mine settlement recovery: credit after (1.700485ms)
+✔ mine settlement recovery: result before (1.655889ms)
+✔ mine settlement recovery: result after (1.676099ms)
+✔ mine settlement recovery: clear before (3.014861ms)
+✔ mine settlement recovery: clear after (1.872665ms)
+✔ 3×3 board hides the mine, marks safe numbers with green eyes and the hit with a red bomb (4.271591ms)
+✔ mine component parser rejects malformed cells/revisions and keeps RPS IDs compatible (0.329375ms)
+✔ slash and text render the committed player and bot turns in one usable board (6.492008ms)
+✔ failed Discord edit and replay cannot repeat a safe bot turn or financial transfer (7.30131ms)
+✔ a mine result keeps the one-minute cooldown, including restart and a different target (11.07769ms)
+✔ rps: no click loses automatically exactly at expiry, grants normal loss shield, and notifies both sides (24.590239ms)
+✔ mine: no click loses automatically exactly at expiry, grants normal loss shield, and notifies both sides (6.337766ms)
+✔ starting the mine then abandoning it loses without inventing another pick or moving the mine (3.534783ms)
+✔ a stale mine click at expiry shows only the timeout result, without a phantom bot animation (3.746832ms)
+✔ rps: a press and background expiry racing at the deadline cannot play or charge twice (2.09533ms)
+✔ mine: a press and background expiry racing at the deadline cannot play or charge twice (1.873656ms)
+✔ a move committed before the deadline keeps its result and cannot become a later timeout loss (2.160697ms)
+✖ timeout uses available balances, including an empty wallet, without counting it as a tie (1.299133ms)
+✔ bank resets, disabled robbery and moved channels cancel games instead of imposing timeout penalties (3.248673ms)
+✔ older unplayed rounds never gain a retroactive timeout penalty (1.626205ms)
+✖ the same target accepts only the first concurrent attacker, across both game types and restart (5.035499ms)
+✔ the target lock is released on settlement while normal protection remains, including for a tie (4.049637ms)
+✔ invalidated games release the target, and the old player cannot settle them later (1.153954ms)
+✔ an attacker cannot open another target to escape an overdue loss before the timer runs (1.566975ms)
+✔ buying protection mid-game cancels the blocked challenge without imposing a timeout debit (2.249891ms)
+✔ lost lease blocks expiry and cannot debit or release a target reservation (3.735094ms)
+✔ timeout journal recovery: reserve before (2.851025ms)
+✔ timeout journal recovery: reserve after (2.12225ms)
+✔ timeout journal recovery: debit before (1.781067ms)
+✔ timeout journal recovery: debit after (1.706615ms)
+✔ timeout journal recovery: credit before (1.982069ms)
+✔ timeout journal recovery: credit after (2.209551ms)
+✔ timeout journal recovery: result before (2.118224ms)
+✔ timeout journal recovery: result after (2.492666ms)
+✔ timeout journal recovery: clear before (9.978784ms)
+✔ timeout journal recovery: clear after (2.832321ms)
+✔ rps: the worker updates the original public message without a click and survives restarting (4.569789ms)
+✔ mine: the worker updates the original public message without a click and survives restarting (2.411124ms)
+✔ Discord being offline or refusing edits never postpones settlement or repeats the debit (3.168752ms)
+✔ a slow Discord edit cannot block other rounds from losing at their deadline (4.722097ms)
+✔ deleted messages are not re-sent, and an unbound sent message is recovered by its saved button IDs (5.01685ms)
+✔ a stopped worker cannot settle or edit until it resumes (1.720125ms)
+✔ slash and text commands save their reply identity for automatic timeout edits (3.561543ms)
+✔ a failed safe-turn edit recovers automatically without another click, including after restart (2.489832ms)
+✔ legacy boards stuck on the old bot preview are restored from the saved pair (1.815389ms)
+✔ mine: an unpublished game never incurs an inactivity debit (1.156409ms)
+✔ rps: an unpublished game never incurs an inactivity debit (0.868285ms)
+✔ an undelivered safe turn cancels at expiry rather than fining a player who cannot see the current board (2.765386ms)
+✔ a recovered, confirmed board still applies the normal inactivity loss exactly once (2.495991ms)
+✔ an old display acknowledgement cannot hide an unrendered newer mine turn (1.753355ms)
+✔ expiry during an in-flight old board edit leaves the final result queued for display (4.858542ms)
+✔ a deleted active message closes the challenge and releases its target without charging (1.388947ms)
+✔ old abandoned rounds cannot starve current expiry or impose retroactive debits (11.72301ms)
+✔ the uploaded timedOut result format displays honestly without inventing a mine hit (8.089238ms)
+✔ mine: a confirmed departure cancels durably and cannot become a later inactivity debit (1.052001ms)
+✔ rps: a confirmed departure cancels durably and cannot become a later inactivity debit (0.713863ms)
+ℹ tests 122
+ℹ suites 0
+ℹ pass 115
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 850.638384
+
+✖ failing tests:
+
+test at test/command-times.test.js:70:1
+✖ robbery reports an open challenge and ignores expired or invalidated challenges (1.618253ms)
+  Error: لا تقدر تبدأ نهب ورصيدك صفر أو بالسالب؛ تحتاج رصيدًا أكبر من صفر.
+      at file:///workspace/scratch/0e1f24ba8450/original/GAME-V67-main/src/service.js:444:95
+
+test at test/member-notifications.test.js:196:32
+✖ a target's 15-minute failed-robbery shield sends its expiry DM, attacker balance 0 (0.826232ms)
+  Error: لا تقدر تبدأ نهب ورصيدك صفر أو بالسالب؛ تحتاج رصيدًا أكبر من صفر.
+      at file:///workspace/scratch/0e1f24ba8450/original/GAME-V67-main/src/service.js:444:95
+
+test at test/robbery-commands.test.js:71:1
+✖ a member cannot start a second robbery command while the first challenge is open (3.250905ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /تم منعك من النهب لمدة 5 دقائق/. Input:
+  
+  '❌ تم منعك من النهب بسبب السبام؛ مدة المنع الأساسية 5 دقائق. تقدر تستخدمه مجددًا <t:1789077900:R>.'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/0e1f24ba8450/original/GAME-V67-main/test/robbery-commands.test.js:79:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '❌ تم منعك من النهب بسبب السبام؛ مدة المنع الأساسية 5 دقائق. تقدر تستخدمه مجددًا <t:1789077900:R>.',
+    expected: /تم منعك من النهب لمدة 5 دقائق/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at test/robbery-commands.test.js:142:1
+✖ a protected target gets the reference reply with its remaining minutes and seconds and no currency changes (7.231656ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /تم منعك من النهب لمدة 5 دقائق/. Input:
+  
+  '❌ تم منعك من النهب بسبب السبام؛ مدة المنع الأساسية 5 دقائق. تقدر تستخدمه مجددًا <t:1789077900:R>.'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/0e1f24ba8450/original/GAME-V67-main/test/robbery-commands.test.js:159:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '❌ تم منعك من النهب بسبب السبام؛ مدة المنع الأساسية 5 دقائق. تقدر تستخدمه مجددًا <t:1789077900:R>.',
+    expected: /تم منعك من النهب لمدة 5 دقائق/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at test/robbery-mine.test.js:99:4
+✖ mine loss, amount 0: settles once, keeps current protection, and stages both DMs (1.250219ms)
+  Error: لا تقدر تبدأ نهب ورصيدك صفر أو بالسالب؛ تحتاج رصيدًا أكبر من صفر.
+      at file:///workspace/scratch/0e1f24ba8450/original/GAME-V67-main/src/service.js:444:95
+
+test at test/robbery-timeout.test.js:82:1
+✖ timeout uses available balances, including an empty wallet, without counting it as a tie (1.299133ms)
+  Error: لا تقدر تبدأ نهب ورصيدك صفر أو بالسالب؛ تحتاج رصيدًا أكبر من صفر.
+      at file:///workspace/scratch/0e1f24ba8450/original/GAME-V67-main/src/service.js:444:95
+
+test at test/robbery-timeout.test.js:109:1
+✖ the same target accepts only the first concurrent attacker, across both game types and restart (5.035499ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/0e1f24ba8450/original/GAME-V67-main/test/robbery-timeout.test.js:114:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

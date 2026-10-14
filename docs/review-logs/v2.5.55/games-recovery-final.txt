@@ -1,0 +1,14 @@
+✔ a disconnect during game startup cannot re-enable input when the old write returns (2.341228ms)
+✔ duplicate resume and gap events share database work (0.374335ms)
+✔ a failed gap write recovers through startup and preserves the unfinished-game boundary (1.006437ms)
+✔ a lost gap acknowledgement can be retried without repeatedly changing the saved boundary (0.458731ms)
+✔ failed recovery retains the credit outbox and retries the same receipt (1.072856ms)
+✔ resuming an already ready tracker does not fence an active game again (0.374815ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 99.311476

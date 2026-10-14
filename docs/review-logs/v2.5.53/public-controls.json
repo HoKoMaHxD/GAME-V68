@@ -1,0 +1,173 @@
+[
+  {
+    "type": 1,
+    "components": [
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:0",
+        "label": "× A1",
+        "style": 2,
+        "disabled": true
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:1",
+        "label": "A2",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:2",
+        "label": "A3",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:3",
+        "label": "A4",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:4",
+        "label": "● A5",
+        "style": 4,
+        "disabled": true
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "components": [
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:5",
+        "label": "B1",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:6",
+        "label": "B2",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:7",
+        "label": "B3",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:8",
+        "label": "B4",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:9",
+        "label": "B5",
+        "style": 1,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "components": [
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:10",
+        "label": "C1",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:11",
+        "label": "C2",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:12",
+        "label": "● C3",
+        "style": 4,
+        "disabled": true
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:13",
+        "label": "C4",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:14",
+        "label": "C5",
+        "style": 1,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "components": [
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:15",
+        "label": "D1",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:16",
+        "label": "D2",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:17",
+        "label": "D3",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:18",
+        "label": "D4",
+        "style": 1,
+        "disabled": false
+      },
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:fire:19",
+        "label": "D5",
+        "style": 1,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "components": [
+      {
+        "type": 2,
+        "custom_id": "ship:v1:100000000000000100:5:own",
+        "label": "🚢 سفني",
+        "style": 2
+      }
+    ]
+  }
+]

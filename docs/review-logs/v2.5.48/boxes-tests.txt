@@ -1,0 +1,37 @@
+✔ fourth edge captures a box despite all three earlier edges belonging to the opponent (2.378625ms)
+✔ one shared vertical edge closes two boxes and a shared horizontal edge does the same (0.330749ms)
+✔ bottom-right box is captured at the boundary without wrapping rows (0.221093ms)
+✔ invalid and occupied edges are rejected without mutating either array (1.009921ms)
+✔ only the invited opponent accepts; rejected and expired invitations never debit either wallet (14.712176ms)
+✔ self, bots, wrong room, invalid stakes and missing membership cannot open a challenge (3.624276ms)
+✔ insufficient funds on open or accept never charge the other player (2.982783ms)
+✔ turns alternate without a capture, capturing retains the turn and grants a fresh deadline (57.828353ms)
+✔ one move awards two adjacent boxes in a live round without giving up the turn (11.221975ms)
+✔ normal finish: all edges must be played and only the box majority determines payout (71.419006ms)
+✔ last mover is not the winner: all edges must be played and only the box majority determines payout (43.183376ms)
+✔ outsiders, copied messages, wrong turns, repeated lines and concurrent clicks cannot add moves (4.754784ms)
+✔ a capture cannot be replayed through rapid clicks while its new board is undelivered (3.836238ms)
+✔ 30-second turn timeout settles once when a click races the expiry worker (3.216904ms)
+✔ an undelivered board times out with refunds instead of player loss (2.746004ms)
+✔ restart retains the board, captured boxes, extra turn and deadline; changed bank cancels with refunds (4.131901ms)
+✔ loss of membership cancels a live game and refunds both stakes (2.192511ms)
+✔ interruption before wallet write during hold recovers exactly once (7.183228ms)
+✔ interruption before wallet write during payout recovers exactly once (6.664867ms)
+✔ interruption after wallet write during hold recovers exactly once (1.744901ms)
+✔ interruption after wallet write during payout recovers exactly once (5.993377ms)
+✔ reset protects active stakes and sending cooldown is independent and only applies to challenger (10.729689ms)
+✔ board provides exactly one button per numbered line, no more than five rows or buttons per row (73.288066ms)
+✔ slash registration, games menu and instructions include مربعات (11.865175ms)
+✔ text parser accepts مربعات <@100000000000000011> ١٠٠٠ (0.79919ms)
+✔ text parser accepts !مربعات <@!100000000000000011> 1000 (0.218364ms)
+✔ text parser accepts -مربعات <@100000000000000011> ۱۰۰۰ (0.077524ms)
+✔ text challenge binds its message; real handler accepts, plays, reports stale presses and blocks spectators (99.540173ms)
+✔ background manager disables timeout controls and inaccessible messages refund instead of hanging the stake (43.080119ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1507.003233
