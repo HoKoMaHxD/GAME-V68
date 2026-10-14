@@ -1,0 +1,48 @@
+services:
+  - type: worker
+    name: clan-quests-bot
+    runtime: node
+    plan: starter
+    numInstances: 1
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.22.0
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      # Optional stable encryption secret: READER_TOKEN_KEY. Default derives from DISCORD_BOT_TOKEN.
+      # /تحديث التوكن saves an encrypted override in MongoDB, without changing this environment value.
+      - key: ARENA_USER_TOKEN
+        sync: false
+      - key: ACKNOWLEDGE_SELFBOT_RISK
+        sync: false
+      - key: OBSERVER_MODE
+        value: selfbot
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: clan_quests
+      - key: CLAN_GUILD_ID
+        sync: false
+      - key: ARENA_GUILD_ID
+        sync: false
+      - key: GENERAL_CHANNEL_ID
+        sync: false
+      - key: CLAN_CHAT_CHANNEL_ID
+        sync: false
+      - key: ARENA_GAMES_BOT_ID
+        value: "995439183650889888"
+      - key: ARENA_GAMES_CHANNEL_ID
+        value: "1142961202004234330"
+      - key: FEELING_CHANNEL_ID
+        sync: false
+      - key: LOOK_CHANNEL_ID
+        sync: false
+      - key: CLAN_VOICE_CHANNEL_ID
+        sync: false
+      # Optional: add CLAN_VOICE_CHANNEL_ID_2 in Environment for the second clan voice room.
+      # Optional: add CLAN_VOICE_CHANNEL_ID_3 in Environment for the third clan voice room.
+      # ID of the clan role in Arena (ARENA_GUILD_ID).
+      - key: CLAN_MEMBER_ROLE_ID
+        sync: false
